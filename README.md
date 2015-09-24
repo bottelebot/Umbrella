@@ -1,4 +1,4 @@
-telegram-bot
+tgsbot
 ============
 
 [![Join the chat at https://gitter.im/yagop/telegram-bot](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yagop/telegram-bot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -330,8 +330,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```bash
 # After those dependencies, lets install the bot
 cd $HOME
-git clone https://github.com/yagop/telegram-bot.git
-cd telegram-bot
+git clone https://github.com/amirsad2/tgsbot.git
+cd tgsbot
 ./launch.sh install
 ./launch.sh # Will ask you for a phone number & confirmation code.
 ```
@@ -351,10 +351,10 @@ Run it as a daemon
 ------------
 If your Linux/Unix comes with [upstart](http://upstart.ubuntu.com/) you can run the bot by this way
 ```bash
-$ sed -i "s/yourusername/$(whoami)/g" etc/telegram.conf
-$ sed -i "s_telegrambotpath_$(pwd)_g" etc/telegram.conf
-$ sudo cp etc/telegram.conf /etc/init/
-$ sudo start telegram # To start it
+$ sed -i "s/yourusername/$(whoami)/g" etc/tgsbot.conf
+$ sed -i "s_telegrambotpath_$(pwd)_g" etc/tgsbot.conf
+$ sudo cp etc/tgsbot.conf /etc/init/
+$ sudo start tgsbot # To start it
 $ sudo stop telegram # To stop it
 ```
 
