@@ -183,7 +183,7 @@ function run(msg, matches)
     if not is_chat_msg(msg) then
 	    return "This is not a group chat."
 	end
-    local data = load_data(_config.moderation.data)
+    
     local receiver = get_receiver(msg)
     if msg.media then
     	if msg.media.type == 'photo' and data[tostring(msg.to.id)]['settings']['set_photo'] == 'waiting' and is_chat_msg(msg) and is_momod(msg) then
